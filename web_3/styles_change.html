@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>資工選課表</h1>
+<table id="csie">
+  <tr>
+    <th>開課單位</th>
+    <th>課程名稱</th>
+    <th>授課教師</th>
+  </tr>
+  <tr>
+    <td>資工系</td>
+    <td>物件導向軟體設計</td>
+    <td>黃崇源</td>    
+  </tr>
+  <tr>
+    <td>資工系</td>
+    <td>計算機網路實驗</td>
+    <td>李春良</td>    
+  </tr>
+  <tr>
+    <td>資工系</td>
+    <td>作業系統實務</td>
+    <td>張哲維</td>    
+  </tr>
+  <tr>
+    <td>資工系</td>
+    <td>生物統計</td>
+    <td>陳光武</td>    
+  </tr>
+  <tr>
+    <td>資工系</td>
+    <td>通訊系統</td>
+    <td>陳仁暉</td>    
+  </tr>
+  <tr>
+    <td>資工系</td>
+    <td>軟硬體專題(2)</td>
+    <td>魏志達</td>    
+  </tr>
+</table>
+<button onclick="changeResult()">Change</button>
+<script>
+  function changeResult(){
+    var myTable = document.getElementById("csie");
+    myTable.rows[1].cells[2].innerHTML = "李春良";
+  }
+</script>
+</body>  
+</html>
