@@ -8,16 +8,14 @@ function printTreeTop(n) {
   for(var i = 1; i <= n; i++){
     let Top = '';
     let j = (2*i)-1;
-    Top += repeatchar(' ', 4-i);
-    Top += repeatchar('*', j);
+    Top += repeatchar(' ', 4-i) + repeatchar('*', j);
     console.log(Top);
   }
 }
 function printTreeBottom(n) {
   for(var i = 1; i <= n; i++){
     let Bottom = '';
-    Bottom += repeatchar(' ', n);
-    Bottom += '*';
+    Bottom += repeatchar(' ', n)+'*';
     console.log(Bottom);
   }
 }
