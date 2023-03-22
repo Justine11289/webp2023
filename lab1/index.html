@@ -7,9 +7,9 @@
   var container = document.getElementById('container');
   window.addEventListener("keyup",function(e){
     console.log(e.key);
-    if(e.key == container.textContent[0]){container.textContent = container.textContent.substring(1,str.length);}
+    if(e.key == container.textContent[0]){container.textContent = container.textContent.substring(1,container.textContent.length);}
     else if(e.key == 'Escape'){container.textContent = " ";}
-    else if(e.key == 'Backspace'){container.textContent = container.textContent.substring(0,str.length-1);}
+    else if(e.key == 'Backspace'){container.textContent = container.textContent.substring(0,container.textContent.length-1);}
     else{container.textContent += e.key;}
   })
 
