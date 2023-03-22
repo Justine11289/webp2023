@@ -1,0 +1,21 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script>window.onload = function(){document.getElementById('container').innerHTML = 'Hello'}</script>
+<body>
+  <div id="container" tabindex="0" class="blockquote text-nowrap"></div>
+</body>
+<script>
+  var container = document.getElementById('container');
+  window.addEventListener("keyup",function(e){
+    console.log(e.key);
+    if(e.key == container.textContent[0]){container.textContent = container.textContent.substring(1,str.length);}
+    else if(e.key == 'Escape'){container.textContent = " ";}
+    else if(e.key == 'Backspace'){container.textContent = container.textContent.substring(0,str.length-1);}
+    else{container.textContent += e.key;}
+  })
+
+  function add_new_chars(){
+    var n = Math.floor(Math.random()*3 +1);
+    var letter = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    for(let i = 1; i <= n; i++){container.textContent += letter[Math.floor(Math.random()*26)];};
+  }
+</script>
