@@ -1,6 +1,6 @@
 import './App.css';
 import multiButton from './cgu_multiButton';
-import HelloCGU from './HelloCGU';
+import HelloCGU from './cgu_hello';
 
 function App() {
   return (
