@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM</title>
+    <script type="text/javascript">
+        function change(){
+            var spanObj= window.document.getElementById("emotion");
+            spanObj.innerHTML="bad";
+            spanObj.style.color="red";
+            spanObj.style.fontWeight="bold";
+            spanObj.style.display="none";
+        }
+    </script>
+</head>
+<body>
+    <div>
+         Today is a <span id="emotion">good</span> day.Let's go to movie. <!--加入span控制-->
+    </div>
+    <button onclick="change();">Change</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 完成動畫特效</title>
+    <script type="text/javascript">
+        function show(){
+            var box=document.getElementById("box");
+            /*取得當前的尺寸設定*/
+            var styles=window.getComputedStyle(box);
+            var size=styles.getPropertyValue("width");
+            size=parseInt(size);
+            /*產生一個放大的動畫特效*/
+            var animeId=window.setInterval(function(){
+                if(size>=200){
+                    window.clearInterval(animeId); //停止動畫
+                    return;
+                }
+                size++; //先調整數值
+                box.style.width=size+"px"; //實際效果
+            },20); //每幾豪秒執行一次
+        }
+    </script>
+    <style type="text/css">
+        .box{
+            width:50px;height:50px;background-color:red;
+            position:fixed;top:0px;right:0px; /*固定在右上方*/
+        }
+    </style>
+</head>
+<body>
+      <div class="box" id="box" onclick="show();"></div>
+</body>
+</html>

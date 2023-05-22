@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Javascipt</title>
+    <script type="text/javascript">
+    /*
+    var n=prompt("請輸入數字","1");
+    if(n>500){
+        alert(n+">500");
+    }else if(n>300){
+        alert(n+">300");
+    }else{
+        alert(n+"<=300");
+    }
+    */
+   //範例
+   var n1=prompt("請輸入數字","");
+   var n2=prompt("請輸入數字","");
+   //資料型態的轉換:把字串->數字
+   n1=Number(n1);
+   n2=Number(n2);
+   var op=prompt("請輸入運算:+,-,*,/","");
+   var result;
+   if(op=="+"){
+       result=n1+n2;
+   }else if(op=="-"){
+       result=n1-n2;
+   }
+   else if(op=="*"){
+       result=n1*n2;
+   }else if(op=="/"){
+       result=n1/n2;
+   }else{
+       result="不合理的運算符號"
+   }
+   alert(result);
+    </script>
+</head>
+<body>
+</body>
+</html>

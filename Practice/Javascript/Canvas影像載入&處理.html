@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <script type="text/javascript">
+        var cvs,ctx;
+        window.onload=function(){
+            cvs = document.getElementById("cvs");
+            ctx = cvs.getContext("2d");
+        };
+        function invertColor(){
+            var pixels=ctx.getImageData(0,0,cvs.width,cvs.height);
+            var data=pixels.data; //一像素佔據4bytes:r.g.b.a (0~255)
+            for(var i=0; i < data.length; i+=4){
+                data[i]=255-data[i]; //r
+                data[i+1]=255-data[i+1]; //g
+                data[i+2]=255-data[i+2]; //b
+            }
+            ctx.putImageData(pixels,0,0);
+        }
+        function loadFile(input){
+            /*載入影像*/
+            var file=input.files[0];
+            var src=URL.createObjectURL(file); //檔案物件轉換成網址
+            var img=new Image();
+            img.src=src;
+            img.onload=function(){ //註冊load事件,圖片載入完成才能繪製
+                ctx.drawImage(this,0,0,cvs.width,cvs.height);
+            };
+        }
+        function saveFile(){
+            var link=document.getElementById("download");
+            link.download="image.jpg";
+            link.href=cvs.toDataURL("image/jpeg");
+            link.click();
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="file" onchange="loadFile(this);"/>
+        <button onclick="saveFile();">儲存檔案</button>
+        <a id="download"></a>
+        <button onclick="invertColor();">顏色反轉</button>
+    </div>
+    <canvas id="cvs" width="800" height="600" style="border:1px solid #000000"></canvas>
+</body>
+</html>
+
+   

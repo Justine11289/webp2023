@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS表格樣式</title>
+    <style type="text/css">
+    table{
+        width:400px;border:1px solid #888888;
+        border-collapse:collapse;
+    }
+    td{
+        border-bottom:1px solid #888888;padding:10px;
+    }
+    /* 表格中的第一對tr */
+    tr:nth-child(1){
+        background-color:#7788aa;color:#ffffff;
+    }
+    /* 表格中的第偶數對tr */
+    tr:nth-child(even){
+        background-color:#e8e8e8;
+    }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Win</td>
+            <td>Lose</td>
+        </tr>
+        <tr>
+            <td>New York Yankees</td>
+            <td>10</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Boston Red Sox</td>
+            <td>9</td>
+            <td>9</td>
+        </tr>
+    </table>    
+</body>
+</html>

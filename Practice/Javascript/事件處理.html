@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Event事件處理</title>
+    <script type="text/javascript">
+    //用Javascript的程式,動態的註冊事件處理器
+    function init(){
+        var btn=document.getElementById("btn");
+        /*
+        btn.onclick=function(){
+            alert("Clicked");
+        }
+        */
+        var handler=function(){ //準備一事件處理器(對應事件的函式)
+           alert("Clicked");
+       }
+       btn.addEventListener("click"/*事件名稱*/,handler);
+    }
+    </script>
+</head>
+ <body onload="init();"> <!--load事件:偵測body標籤是否完全載入-->
+    <button id="btn">Click</button>
+    <!-- <span onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">Test</span> 滑鼠移入及移出此標籤的變化 -->
+</body>
+</html>

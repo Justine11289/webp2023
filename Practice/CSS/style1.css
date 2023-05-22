@@ -1,0 +1,26 @@
+body{margin:0px;}
+/* nav樣式設定 */
+nav{display:flex;}
+nav>.logo{
+    flex:none;width:100px;/* 固定尺寸,無彈性 */
+    background-color:#ffcccc;
+}
+nav>.menu{
+    flex:auto;/* 盡量把容器空間填滿,有彈性 */
+    background-color:#ccccff;
+}
+nav>.user{
+    flex:none;width:100px;
+    background-color:#ccffcc;
+}
+/* main樣式設定 */
+main{ /* 容器 */
+    display:flex;
+    justify-content:center;
+    align-items:stretch;  /* 延展方格 */
+    background-color:#cccccc;
+}
+main>.item{ /* 項目 */
+    flex:none;width:300px;margin:10px; 
+    background-color:#ffcccc;
+}

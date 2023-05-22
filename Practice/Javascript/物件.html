@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Object</title>
+    <script type="text/javascript">
+    /*
+    // 建立空白物件
+    var point=new Object();
+    //建立物件成員(屬性&方法)
+    point.x=3;
+    point.y=4;
+    point.getPosition=function(){
+        alert(this.x+","+this.y);
+    };
+    // 使用物件
+     point.getPosition();
+    */
+    // Example:遊戲中的玩家設計
+    function Player(name,hp){  //建構物件的函式
+        // this代表新建的空白物件
+        this.name=name;
+        this.hp=hp;
+        this.fight=function(){
+            this.hp-=2;
+        };
+        this.rest=function(){
+            this.hp++;
+        };
+        this.report=function(){
+            alert(this.name+": "+this.hp);
+        };
+    }
+    var player=new Player("John",100);
+    player.fight();
+    player.rest();
+    player.report();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

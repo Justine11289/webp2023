@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>自動排程</title>
+    <script type="text/javascript">
+    function init(){
+        var time=document.getElementById("timer");
+        window.setInterval(countdown,1000); //setInterval:每秒不斷執行
+    }
+    function countdown(){
+        timer.innerHTML-=1;
+        if(timer.innerHTML>0){
+            window.setTimeout(countdown,1000); //setTimeout:執行一秒即停
+        }
+        else{
+            document.location="http://www.yahoo.com.tw/";
+        }
+    }
+    </script>
+</head>
+ <body onload="init();">
+    <span id="timer">3</span>
+</body>
+</html>

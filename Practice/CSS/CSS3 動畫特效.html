@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3 Animation</title>
+    <script type="text/javascript">
+        function start(){
+            var text = document.getElementById("text");
+            text.classList.add("effect");
+        }
+    </script>
+    <style type="text/css">
+        .effect{
+            animation:blink 1s infinite;
+        }
+        /*定義動畫*/
+        @keyframes blink{
+            /*閃爍*/
+            0%{opacity:0}
+            50%{opacity:1}
+            100%{opacity:0}
+        }
+    </style>
+</head>
+<body>
+    <div id="text">Hello World</div>   
+    <button onclick="start()">Start</button>
+</body>
+</html>
