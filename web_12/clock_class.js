@@ -12,7 +12,7 @@ class Clock extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>長庚標準時間#state</h1>
+				<h1>長庚標準時間#state by class component</h1>
 				<h2>目前為: {this.state.date.toLocaleTimeString()}.</h2>
 			</div>
 		);
